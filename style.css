@@ -46,8 +46,6 @@ button {
     background-color: #072ac8;
     border: none;
     text-align: center;
-    font-size: 1em;
-    font-weight: 400;
     color: #fff;
     padding: 15px 33px;
     cursor: pointer;
@@ -66,31 +64,64 @@ a{
 
 
 /*****************Navigation Bar*********************/
-.nav-bar a {
-    color: #6b708d;
-    font-size: 20px;
+
+.nav-bar {
+    height: 80px;
+    margin-bottom: 50px;
 }
 
-.nav-bar{
-    height: 122px;
+.nav-bar a {
+    color: #6b708d;
+    font-size: 18px;
+}
+
+#circlelogo {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    z-index: 2;
+}
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 70vh;
+    background-color: #a2d6f9;
+    z-index: 2;
+    right: -200px;
+    transition: .5s ease-in-out;
+}
+#empty {
+    height: 40px;
+}
+.nav-links li {
+    margin: 20px;
+}
+.nav-links.active {
+    right: 0;
+}
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    background-color: #a2d6f9;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
-}
-.nav-bar > .container {
-    scale: 0.6;
-    align-self: flex-end;
-    height: 52px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    border-radius: 40%;
+    cursor: pointer;
+    z-index: 3;
 }
-.nav-bar > .container > ul{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 400px;
+.toggle img {
+    height: 40px;
 }
+
 /****************************************************/
 
 /*****************Hero Section***********************/
@@ -345,7 +376,6 @@ a{
     height: 250px;
     margin: 10px;
     text-align: center;
-    border-radius: 2%;
 }
 .cta-section > .container {
     display: flex;
@@ -381,7 +411,7 @@ a{
 
 .footer-section > .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 150px;
 }
 .footer-section ul  {
@@ -395,6 +425,7 @@ a{
 }
 .footer-section li {
     margin: 10px;
+    
 }
 .footer-section a {
     color:#6b708d;
