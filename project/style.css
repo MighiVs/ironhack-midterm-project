@@ -1,9 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    line-height: 1.5;
+/* In order to keep the code DRY, we're going to re-use the HomePage css file */
+
+#home a{
+    color: #6b708d;
 }
-html {
-    background-color: #ecf7ff;
+
+/****************New Section Simplify********************/
+.simplify {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding: 40px;
+}
+.simplify h1 {
+    text-align: center;
+}
+.simplify > * {
+    margin-bottom: 30px;
+}
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simplify img {
+    max-width: 100%; 
+}
+  
+.simplify .container > * {
+    margin-bottom: 50px;
+}
+
+.simplify .container {
+    position: relative;
+}
+#blurred {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(20px)
+}
+/*************************************************/
+
+/**** Small Screens > 760px width ****/
+@media (min-width: 760px) {
+    .simplify h1 {
+        text-align: start;
+    }
+    .subtitle {
+        flex-direction: row;
+    }
+    .simplify img {
+        height: 600px;
+        width: 100%;
+    }
+    
 }
