@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Midterm Project</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/ce400484dc.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="scrollArrow">
+      <i class="fa-solid fa-arrow-up fa-beat"></i>
+    </div>
     <nav class="nav-bar">
       <div class="container">
        <img src="./images/logos/circle.svg" alt="circle-logo" id="circlelogo"/>
        <ul class="nav-links">
           <li id="empty"></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Services</a></li>
-          <li><button type="submit" class="btn">Contact us</button></li>
+          <li id="home"><a href="#">Home</a></li>
+          <li id="projects"><a href="#projectlink">Projects</a></li>
+          <li id="services"><a href="#servicelink">Services</a></li>
+          <li class="btn"><button type="submit" class="btn">Contact us</button></li>
        </ul>
        <div class="toggle"><img src="./images/icons/togglelist.png" alt="menu"></div>
     </div>
@@ -31,8 +35,10 @@
       <div class="hero-content">
         <h1>Empower Your Business With Stunning Design!</h1>
         <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
-        <button type="submit" class="btn">Get in touch</button>
-        <a href="">See our work</a>
+        <div class="herofoot">
+          <button type="submit" class="btn">Get in touch</button>
+          <a href="">See our work</a>
+        </div>
       </div>
     </div>
   </section>
@@ -45,7 +51,7 @@
     <img src="./images/logos/amazon-logo.svg" alt="amazon-logo">
   </div>
   </section>
-  <section class="project-section">
+  <section class="project-section" id="projectlink">
     <div class="container">
       <h3>Recent Projects</h3>
       <div class="projects">
@@ -90,13 +96,15 @@
         <p>“Circle helped us through every stage of our startup. We really enjoyed working with you.”</p>
         <div class="signature">
           <img src="./images/testimonial-section/profile.png" alt="">
-          <p>Kristin Watson</p>
-          <p>Booking.com</p>
+          <div>
+            <p>Kristin Watson</p>
+            <p>Booking.com</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="services-section">
+  <section class="services-section" id="servicelink">
     <div class="container">
       <h3>Our Services</h3>
       <div class="services">
@@ -135,7 +143,7 @@
         <div class="mail-container">
           <label for="email"><img src="./images/newsletter/icon/mail.svg" alt=""></label>
           <input type="email" id="email" placeholder="Enter your email" />
-      </div>
+        </div>
         <button type="submit" class="btn">Subscribe</button>
       </form>
     </div>
