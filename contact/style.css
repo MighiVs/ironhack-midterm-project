@@ -1,9 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    line-height: 1.5;
+#home a {
+    color: #6b708d;
 }
-html {
-    background-color: #ecf7ff;
+textarea {
+    resize: none;
+    height: 100px;
+}
+input {
+    padding: 8px;
+}
+.contact form {
+    font-size: 14px;
+    color:#6b708d;
+}
+.contact input {
+    background-color: rgba(107, 112, 141, 0.1);
+    border: none;
+}
+input:focus{
+    outline: 2px solid rgba(29, 119, 204, 0.925);
+}
+textarea {
+    padding: 8px;
+}
+.contact {
+    margin: 80px 30px;
+}
+.contact h1 {
+    margin-bottom: 30px;
+}
+.contact input {
+    background-color: rgba(107, 112, 141, 0.1);
+    border: none;
+}
+.field {
+    display: flex;
+    flex-direction:column;
+    margin: 15px 0;
+}
+.field > * {
+    margin: 3px 0;
+}
+.contact button {
+    width: 100%;
+}
+
+/*************************************************/
+
+/**** Small Screens > 760px width ****/
+
+@media (min-width: 760px) {
+    .field , .formrow{
+        width: 60%;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formrow > * {
+        width: 100%;
+    }
+ 
+    .contact button {
+        width: 60%;
+    }
+    .contact h1 {
+        text-align: center;
+    }
+    
+}
+
+/**************************************************/
+
+/**** Desktop > 1025px width ****/
+@media (min-width: 1025px) {
+    .field, .formrow {
+        width: 100%;
+    }
+    .contact button {
+        width: 100%;
+    }
+    .formrow {
+        display: flex;
+        justify-content: space-between;
+    }
+    .emaildiv {
+        margin-right: 30px;
+    }
+    input {
+        height: 60px;
+        padding: 20px;
+        font-size: 14px;
+    }
+    textarea {
+        height: 200px;
+        font-size: 14px;
+    }
+    .contact {
+        margin: 100px 200px;
+    }
+    .contact h1 {
+        text-align: start;
+        margin-bottom: 50px;
+    }
+    
+    .field {
+        margin-bottom: 40px;
+    }
+  
 }
