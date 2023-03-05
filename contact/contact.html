@@ -5,51 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/ce400484dc.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="scrollArrow">
+      <i class="fa-solid fa-arrow-up fa-beat"></i>
+    </div>
     <nav class="nav-bar">
-        <div class="container">
-         <img src="./images/logos/circle.svg" alt="circle-logo" />
-         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Services</a></li>
-         </ul>
-         <button type="submit" class="btn">Contact us</button>
-      </div>
-    </nav>
+      <div class="container">
+       <img src="../images/logos/circle.svg" alt="circle-logo" id="circlelogo"/>
+       <ul class="nav-links">
+          <li id="empty"></li>
+          <li id="home"><a href="#">Home</a></li>
+          <li id="projects"><a href="../index.html#projectlink">Projects</a></li>
+          <li id="services"><a href="../index.html#servicelink">Services</a></li>
+          <li class="btn"><button type="submit" class="btn">Contact us</button></li>
+       </ul>
+       <div class="toggle"><img src="../images/icons/togglelist.png" alt="menu"></div>
+    </div>
+  </nav>
     <section class="contact">
         <h1>Contact Us</h1>
         <form action="" id="contact-us">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" placeholder="Enter your full name">
-            <label for="email"><img src="" alt=""></label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <label for="phone">Phone</label>
-            <input type="number" id="phone" placeholder="Enter your phone number">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="60" rows="8" placeholder="Write your message here..."></textarea>
-            <button type="submit" class="btn">Subscribe</button>
+            <div class="namediv field">
+              <label for="name">Full Name *</label>
+              <input type="text" name="name" id="name" placeholder="Enter your full name">
+            </div>
+            <div class="formrow">
+              <div class="emaildiv field">
+                <label for="email"><img src="" alt="">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" />
+              </div>
+              <div class="phonediv field">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+              </div>
+            </div>
+            <div class="messagediv field">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
           </form>
     </section>
 
 
     <footer class="footer-section">
-        <div class="container">
-          <div>
-            <img src="./images/logos/circle.svg" alt="circle-logo">
-            <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-            <ul>
-              <li>Tean</li>
-              <li>Services</li>
-              <li>About Us</li>
-              <li>Press</li>
-              <li>Projects</li>
-              <li>Privacy Policy</li>
-            </ul>
-          </div>
+      <div class="container">
+        <div class="left">
+          <img src="../images/logos/circle.svg" alt="circle-logo">
+          <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
         </div>
-      </footer>
-	<!----<script src="index.js"></script>--->
+          <ul>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        
+      </div>
+    </footer>
+	<script src="../script/script.js"></script>
   </body>
 </html>
