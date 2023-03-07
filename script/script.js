@@ -1,9 +1,11 @@
 /********************Nav-bar toggle feature**********************/
 const toggle = document.querySelector(".toggle");
 const navMenu = document.querySelector(".nav-links");
+const overlay = document.querySelector(".overlay");
 
 toggle.addEventListener("click", () =>{
     navMenu.classList.toggle("active");
+    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 })
 /****************************************************************/
 

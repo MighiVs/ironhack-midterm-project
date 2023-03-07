@@ -85,6 +85,26 @@ a:hover {
     cursor: pointer;
     z-index: 5;
 }
+
+.heartbeat {
+    animation: heartbeat 1s infinite;
+  }
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1)
+    }
+    10% {
+      transform: scale(1.05)
+    }
+    20%{
+      transform: scale(0.95)
+    }
+  }
+  .btn:hover {
+    animation: heartbeat 1s infinite;
+    
+  }
 /****************************************************/
 
 
@@ -98,6 +118,10 @@ a:hover {
 .nav-bar a {
     color: #6b708d;
     font-size: 18px;
+}
+.nav-links .btn a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #circlelogo {
@@ -117,8 +141,10 @@ a:hover {
     height: 70vh;
     background-color: #a2d6f9;
     z-index: 2;
+    border-radius: 10px;
     right: -200px;
     transition: .5s ease-in-out;
+    z-index: 20;
 }
 #empty {
     height: 40px;
@@ -141,11 +167,27 @@ a:hover {
     align-items: center;
     border-radius: 40%;
     cursor: pointer;
-    z-index: 3;
+    z-index: 20;
 }
+body.nav-active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
 .toggle img {
     height: 40px;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 10; /* Make sure the overlay is on top of all other elements */
+    display: none; /* Hide the overlay by default */
+  }
+  
+
 
 /****************************************************/
 
@@ -158,6 +200,11 @@ a:hover {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+}
+
+.hero-section .btn a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #heropic {
@@ -186,6 +233,7 @@ a:hover {
 }
 
 
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -202,12 +250,14 @@ a:hover {
     display:flex;
     flex-direction: column;
 }
+.herofoot a {
+    align-self: center; 
+}
 /****************************************************/
 
 /*****************Client Section*********************/
 
 .client-section > .container {
-    filter: grayscale(100%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -216,7 +266,15 @@ a:hover {
 }
 
 .client-section img {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.client-section a {
     margin: 50px;
+}
+.client-section img:hover {
+    filter: grayscale(0%);
 }
 
 /****************************************************/
@@ -258,6 +316,7 @@ a:hover {
     margin: 30px;
     box-shadow: 20px 20px 120px -45px rgba(0,0,0,0.5);
 }
+
 .project .title {
     padding-left: 20px;
 }
@@ -265,6 +324,7 @@ a:hover {
     margin: 10px 0;
 }
 .project a {
+    align-self: flex-start;
     padding: 20px 20px;
 }
 
@@ -399,6 +459,9 @@ a:hover {
     align-items: center;
     border-radius: 100%;
 
+}
+.service a {
+    align-self: flex-start;
 }
 
 /****************************************************/
@@ -623,7 +686,7 @@ h4 {
 
 /*****************Navigation Bar****************/
 .nav-bar {
-    padding: 0 100px;
+    padding: 0 160px;
 }
 .nav-bar .container {
     justify-content: space-between; 
@@ -652,7 +715,7 @@ h4 {
     flex-grow: 1;
     text-align: center;
 }
-.nav-bar .btn {
+.nav-bar .libtn {
     flex-grow: 12;
     text-align: right;
 }
@@ -702,7 +765,7 @@ h4 {
 
 .client-section .container {
     justify-content: space-between;
-    margin: 0 50px;
+    margin: 0 100px;
 }
 
 
@@ -713,6 +776,11 @@ h4 {
     text-align: start;
     margin-left: 30px;
 }
+
+.project img {
+    height: 60%; /* Adjustment required for images to be equal */
+}
+
 
 /****************************************************/
 
@@ -819,6 +887,9 @@ h4 {
     width: 80px;
 }
 
+.footer-section {
+    padding: 120px 200px;
+}
 
 
 /*************************************************/
