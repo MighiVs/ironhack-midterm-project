@@ -35,3 +35,9 @@ function scrollFunction() {
   }
 
   /*****************************************************************/
+
+  /* JAVASCRIPT FUNCTIONALITY FOR THE WEBSITE */ 
+
+
+
+  /************** */
