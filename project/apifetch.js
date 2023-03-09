@@ -1,51 +1,68 @@
-  /* Fetching API */
+/* Fetching API */
 
-  window.onload = function() {
-    fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
-      .then( response => {
-        if (response) {
-          return response.json();
-        }
-        throw new Error('Network response failed.');
-      })
-      .then( data => {
-        console.log(data);
-        const mainSection = document.querySelector(".simplify");
-        const projectSection = document.querySelector(".projects");
+window.onload = function () {
+  fetch(
+    "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
+  )
+    .then((response) => {
+      if (response) {
+        return response.json();
+      }
+      throw new Error("Network response failed.");
+    })
+    .then((data) => {
+      const mainSection = document.querySelector(".simplify");
+      const projectSection = document.querySelector(".projects");
 
-        const others  = loadMainProject(mainSection, data, "1");
-        loadOtherProjects(projectSection, others);
-        
-      })
-      .catch( error => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-  };
+      const others = loadMainProject(mainSection, data, "1");
+      loadOtherProjects(projectSection, others);
+    })
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error);
+    });
+};
 
-  // Having the main section, the data, and the uuid, load data in the main section
-  // Return the array of the other projects (not main)
-  const loadMainProject = (section, apiData, uuid) => {
+// Having the main section, the data, and the uuid, load data in the main section
+// Return the array of the other projects (not main)
+const loadMainProject = (section, apiData, uuid) => {
+  const mainData = apiData.find((project) => project.uuid === uuid); //Find is like filter but returns the first found element
 
-    const mainData = apiData.find(project => project.uuid === uuid); //Find is like filter but returns the first found element
-    
-    // Get html elements
-    const title = section.querySelector("h1");
-    const images = section.querySelectorAll("img");
-    const description = section.querySelector(".subtitle p:first-child");
-    const date = section.querySelector(".subtitle p:nth-child(2");
-    const content = section.querySelector(".container p");
+  const template = `
+    <h1>${mainData.name}</h1>
+    <div class="subtitle">
+      <p>${mainData.description}</p>
+      <p>${mainData.completed_on}</p>
+    </div>
+    <div class="container">
+      <img src="${mainData.image}" alt="abstract" />
+      <img id="blurred" src="${mainData.image}" alt="" />
+      <p>${mainData.content}</p>
+    </div>`;
 
-    //Edit html elements
-    title.innerHTML = mainData.name;
-    images.forEach(img => img.setAttribute("src", mainData.image));
-    description.innerHTML = mainData.description;
-    date.innerHTML = mainData.completed_on;
-    content.innerHTML = mainData.content;
-    
-    return apiData.filter(project => project.uuid !== uuid);
-  }
+  section.innerHTML = template;
 
-  // For every element in otherProjects, add in the proper section said project
+  return apiData.filter((project) => project.uuid !== uuid);
+};
+
+// For every element in otherProjects, add in the proper section said project
+const loadOtherProjects = (section, otherProjects) => {
+  otherProjects.forEach((project) => {
+    const template = `
+    <div class="project">
+      <img src="${project.image}" alt="abstract" />
+      <div class="title">
+        <h4>${project.name}</h4>
+        <p>${project.description}</p>
+      </div>
+      <a href="">Learn more</a>
+    </div>`;
+
+    section.innerHTML += template;
+  });
+};
+
+/*      NO TEMPLATE METHOD FOR BOTH FUNCTIONS
+// For every element in otherProjects, add in the proper section said project
   const loadOtherProjects = (section, otherProjects) => {
     otherProjects.forEach(project => {
 
@@ -82,3 +99,4 @@
 
     })
   }
+  */
