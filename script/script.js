@@ -1,4 +1,4 @@
-const SERVER_URL = "http://localhost:8000"
+const SERVER_URL = "http://localhost:8000";
 
 /********************Nav-bar toggle feature**********************/
 const toggle = document.querySelector(".toggle");
@@ -66,7 +66,6 @@ if (
 /*** CONTACT FORM validation and other functionailities ***/
 
 if (window.location.href.includes("contact.html")) {
-
   const contactForm = document.getElementById("contact-us");
 
   const nameInput = document.getElementById("name");
@@ -83,16 +82,20 @@ if (window.location.href.includes("contact.html")) {
     inputValidation(mailInput, phoneInput, errors);
     const valid = errorOutput(errors);
 
-    if (valid) { 
-      saveContact(nameInput.value, mailInput.value, phoneInput.value, message.value);
+    if (valid) {
+      saveContact(
+        nameInput.value,
+        mailInput.value,
+        phoneInput.value,
+        message.value
+      );
       emptyContactForm(nameInput, mailInput, phoneInput, message);
 
-      alert("Thank you for contacting us! We have received your message and will get back to you as soon as possible.");
+      alert(
+        "Thank you for contacting us! We have received your message and will get back to you as soon as possible."
+      );
     }
   });
-
-  
-
 }
 /********************************* */
 
@@ -133,32 +136,29 @@ function errorOutput(errors) {
   }
 }
 
-
-
 function saveContact(name, email, phone, message) {
-
   const contact = {
     name,
     email,
     phone,
-    message
-  }
+    message,
+  };
 
   fetch(`${SERVER_URL}/contacts`)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       const contacts = data.contacts || []; // get existing contacts, or start with an empty array
       contacts.push(contact); // add the new contact to the array
       return fetch(`${SERVER_URL}/contacts`, {
-        method: 'PUT', // PUT method:  to update the entire contacts array
+        method: "PUT", // PUT method:  to update the entire contacts array
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ contacts }) // send the updated contacts array back to the server
+        body: JSON.stringify({ contacts }), // send the updated contacts array back to the server
       });
     })
-    .then(response => response.json())
-    .then(response => console.log(JSON.stringify(response)));
+    .then((response) => response.json())
+    .then((response) => console.log(JSON.stringify(response)));
 }
 
 function emptyContactForm(name, email, phone, message) {
@@ -167,7 +167,5 @@ function emptyContactForm(name, email, phone, message) {
   phone.value = "";
   message.value = "";
 }
-
-
 
 /*************** */

@@ -4,14 +4,13 @@ window.onload = function () {
   fetch(
     "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
   )
-    .then(response => response.json())
+    .then((response) => response.json())
     .then((data) => {
-
       const mainSection = document.querySelector(".simplify");
       const projectSection = document.querySelector(".projects");
 
-      const uuid = (Math.floor(Math.random()*4)+1).toString(); // Random number from 1 to 4
-      
+      const uuid = (Math.floor(Math.random() * 4) + 1).toString(); // Random number from 1 to 4
+
       const others = loadMainProject(mainSection, data, uuid);
       loadOtherProjects(projectSection, others);
     })
@@ -53,7 +52,6 @@ const loadMainProject = (section, apiData) => {
   return apiData.filter((project) => project.uuid !== mainData.uuid);
 };
 
-
 // For every element in otherProjects, add in the proper section said project
 const loadOtherProjects = (section, otherProjects) => {
   otherProjects.forEach((project) => {
@@ -68,20 +66,8 @@ const loadOtherProjects = (section, otherProjects) => {
     </div>`;
 
     section.innerHTML += template;
-
   });
 };
-
-
-
-
-
-
-
-
-
-
-
 
 /*      NO TEMPLATE METHOD FOR BOTH FUNCTIONS
 // For every element in otherProjects, add in the proper section said project
