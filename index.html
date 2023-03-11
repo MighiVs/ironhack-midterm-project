@@ -26,10 +26,15 @@
         <ul class="nav-links">
           <li id="empty"></li>
           <li id="home"><a href="./index.html">Home</a></li>
-          <li id="projects"><a href="#projectlink">Projects</a></li>
+          <li id="projects"><a href="./project/project.html">Projects</a></li>
           <li id="services"><a href="#servicelink">Services</a></li>
           <li class="libtn">
-            <button class="btn"><a href="./contact/contact.html">Contact Us</a></button>
+            <button
+              class="btn"
+              onclick="window.location.href='./contact/contact.html'"
+            >
+              Contact Us
+            </button>
           </li>
         </ul>
         <div class="toggle">
@@ -63,19 +68,34 @@
             develop astonishing websites and mobile apps.
           </p>
           <div class="herofoot">
-            <button class="btn"><a href="./contact/contact.html">Get in touch</a></button>
-            <a href="">See our work</a>
+            <button
+              class="btn"
+              onclick="window.location.href='./contact/contact.html'"
+            >
+              Get in touch
+            </button>
+            <a href="./project/project.html">See our work</a>
           </div>
         </div>
       </div>
     </section>
     <section class="client-section">
       <div class="container">
-        <a href="https://www.airbnb.com/" target="_blank"><img src="./images/logos/airbnb-logo.svg" alt="airbnb-logo" /></a>
-        <a href="https://www.google.com" target="_blank"><img src="./images/logos/google-logo.svg" alt="google-logo" /></a>
-        <a href="https://www.microsoft.com/" target="_blank"><img src="./images/logos/microsoft-logo.svg" alt="microsoft-logo" /></a>
-        <a href="https://www.fedex.com" target="_blank"><img src="./images/logos/fedex-logo.svg" alt="fedex-logo" /></a>
-        <a href="https://www.amazon.com/" target="_blank"><img src="./images/logos/amazon-logo.svg" alt="amazon-logo" /></a>
+        <a href="https://www.airbnb.com/" target="_blank"
+          ><img src="./images/logos/airbnb-logo.svg" alt="airbnb-logo"
+        /></a>
+        <a href="https://www.google.com" target="_blank"
+          ><img src="./images/logos/google-logo.svg" alt="google-logo"
+        /></a>
+        <a href="https://www.microsoft.com/" target="_blank"
+          ><img src="./images/logos/microsoft-logo.svg" alt="microsoft-logo"
+        /></a>
+        <a href="https://www.fedex.com" target="_blank"
+          ><img src="./images/logos/fedex-logo.svg" alt="fedex-logo"
+        /></a>
+        <a href="https://www.amazon.com/" target="_blank"
+          ><img src="./images/logos/amazon-logo.svg" alt="amazon-logo"
+        /></a>
       </div>
     </section>
     <section class="project-section" id="projectlink">
@@ -83,28 +103,28 @@
         <h3>Recent Projects</h3>
         <div class="projects">
           <div class="project">
-            <img src="./images/projects-section/1.jpg" alt="abstract" />
+            <img src="./images/projects-section/1.jpg" alt="simplify" />
             <div class="title">
               <h4>Simplify</h4>
               <p>UI Design & App Development</p>
             </div>
-            <a href="./project/project.html">Learn more</a>
+            <a href="./project/project.html?uuid=1">Learn more</a>
           </div>
           <div class="project">
-            <img src="./images/projects-section/2.jpg" alt="abstract" />
+            <img src="./images/projects-section/2.jpg" alt="dashcoin" />
             <div class="title">
               <h4>Dashcoin</h4>
               <p>Web Development</p>
             </div>
-            <a href="">Learn more</a>
+            <a href="./project/project.html?uuid=2">Learn more</a>
           </div>
           <div class="project">
-            <img src="./images/projects-section/3.jpg" alt="abstract" />
+            <img src="./images/projects-section/3.jpg" alt="vectorify" />
             <div class="title">
               <h4>Vectorify</h4>
               <p>User Experience Design</p>
             </div>
-            <a href="">Learn more</a>
+            <a href="./project/project.html?uuid=3">Learn more</a>
           </div>
         </div>
       </div>
@@ -203,7 +223,12 @@
             <label for="email"
               ><img src="./images/newsletter/icon/mail.svg" alt=""
             /></label>
-            <input type="email" id="email" placeholder="Enter your email" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
           </div>
           <button type="submit" class="btn">Subscribe</button>
         </form>
