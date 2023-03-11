@@ -86,25 +86,14 @@ a:hover {
     z-index: 5;
 }
 
-.heartbeat {
-    animation: heartbeat 1s infinite;
-  }
-
-  @keyframes heartbeat {
-    0% {
-      transform: scale(1)
-    }
-    10% {
-      transform: scale(1.05)
-    }
-    20%{
-      transform: scale(0.95)
-    }
-  }
-  .btn:hover {
-    animation: heartbeat 1s infinite;
-    
-  }
+.btn:hover {
+    background: rgb(0,3,255);
+ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+ }
+.btn:active {
+    background: rgb(2,126,251);
+    background: linear-gradient(0deg, rgba(2,126,251,1) 0%, rgba(0,3,255,1) 100%);
+}
 /****************************************************/
 
 

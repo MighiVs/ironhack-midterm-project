@@ -3,6 +3,9 @@
 #home a{
     color: #6b708d;
 }
+#projects a {
+    color:rgb(0,3,255);
+}
 
 /****************New Section Simplify********************/
 .simplify {
