@@ -123,6 +123,8 @@ function inputValidation(mailInput, phoneInput, errors) {
   }
 }
 
+// Boolean function that returns true if there are no errors, false otherwise
+// If there are errors, display them
 function errorOutput(errors) {
   if (Object.keys(errors).length > 0) {
     // Display errors to the user
@@ -136,6 +138,8 @@ function errorOutput(errors) {
   }
 }
 
+// Functionality for JSON SERVER
+// Sending contact info and saving it into the "server"
 function saveContact(name, email, phone, message) {
   const contact = {
     name,
