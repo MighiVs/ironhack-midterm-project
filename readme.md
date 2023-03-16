@@ -78,13 +78,15 @@ Actualmente este proyecto no está bajo ninguna licencia.
 Este proyecto ha sido realizado por **Miguel Vergara**  como parte del programa de **Ironhack** en **Barcelona**. El diseño original fue proporcionado por Ironhack. Se han utilizado las siguientes herramientas y recursos:
 
 **FontAwesome** para algunos iconos.
+
 **Google Fonts** para la fuente utilizada.
+
 **Netlify** para el despliegue de la página web.
 
 
 
 ## Badges
 
-Netlify Status*** LINK**
+[Netlify Status](https://taupe-fairy-fb04ab.netlify.app)
 
 Este badge muestra el estado actual del despliegue de la página web en Netlify. Haga clic en él para ver los detalles en la plataforma de Netlify.
