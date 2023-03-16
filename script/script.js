@@ -75,7 +75,7 @@ if (window.location.href.includes("contact.html")) {
 
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-
+    cleanErrors(); 
     // If default html method for validation fails, we check email and phone
     // Name and message inputs will be free of checking, only "required"
     const errors = {};
@@ -140,8 +140,7 @@ function showErrors(errors) {
 
 function cleanErrors() {
   const errors = document.querySelectorAll("#contact-us span");
-  errors.forEach(error => error.innerHTML = "");
-
+  errors.forEach((error) => (error.innerHTML = ""));
 }
 
 function inputValidation(mailInput, phoneInput, messageInput, errors) {
