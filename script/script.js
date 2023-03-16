@@ -79,7 +79,7 @@ if (window.location.href.includes("contact.html")) {
     // If default html method for validation fails, we check email and phone
     // Name and message inputs will be free of checking, only "required"
     const errors = {};
-    inputValidation(mailInput, phoneInput, errors);
+    inputValidation(mailInput, phoneInput, message, errors);
     const valid = errorOutput(errors);
 
     if (valid) {
@@ -90,7 +90,7 @@ if (window.location.href.includes("contact.html")) {
         message.value
       );
       emptyContactForm(nameInput, mailInput, phoneInput, message);
-
+      cleanErrors();
       alert(
         "Thank you for contacting us! We have received your message and will get back to you as soon as possible."
       );
@@ -102,13 +102,49 @@ if (window.location.href.includes("contact.html")) {
 /* AUX FUNCTIONS */
 
 function isValidEmail(email) {
-  // ensure that the input is not null or an empty string
   // validate the email using a regular expression (regex)
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   return emailRegex.test(email);
 }
 
-function inputValidation(mailInput, phoneInput, errors) {
+function isValidMessage(message) {
+  // Validate message is not longer than 250 characters
+  if (message.length > 250) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function isValidPhone(phone) {
+  const phoneRegex = /^(\d{3}\s?\d{3}\s?\d{3})$/;
+  return phoneRegex.test(phone);
+}
+
+function showErrors(errors) {
+  for (var error in errors) {
+    if (error === "email") {
+      const mailErrMsg = document.getElementById("error-email");
+      mailErrMsg.innerHTML = errors[error];
+    }
+    if (error === "phone") {
+      const phoneErrMsg = document.getElementById("error-phone");
+      phoneErrMsg.innerHTML = errors[error];
+    }
+    if (error === "message") {
+      const messageErrMsg = document.getElementById("error-message");
+      messageErrMsg.innerHTML = errors[error];
+    }
+  }
+}
+
+function cleanErrors() {
+  const errors = document.querySelectorAll("#contact-us span");
+  errors.forEach(error => error.innerHTML = "");
+
+}
+
+function inputValidation(mailInput, phoneInput, messageInput, errors) {
   if (mailInput.value.trim() === "") {
     errors.email = "Email is required.";
   } else if (!isValidEmail(mailInput.value)) {
@@ -118,8 +154,12 @@ function inputValidation(mailInput, phoneInput, errors) {
   const phoneRegex = /^(\d{3}\s?\d{3}\s?\d{3})$/;
   if (phoneInput.value.trim() === "") {
     errors.phone = "Phone number is required.";
-  } else if (!phoneRegex.test(phoneInput.value)) {
+  } else if (!isValidPhone(phoneInput.value)) {
     errors.phone = "Please enter a valid 9-digit phone number.";
+  }
+
+  if (!isValidMessage(messageInput.value)) {
+    errors.message = "Message exceeds length limit (250 characters)";
   }
 }
 
@@ -128,9 +168,7 @@ function inputValidation(mailInput, phoneInput, errors) {
 function errorOutput(errors) {
   if (Object.keys(errors).length > 0) {
     // Display errors to the user
-    for (var error in errors) {
-      alert(`Error in field "${error.toUpperCase()}": ${errors[error]}`);
-    }
+    showErrors(errors);
     return false;
   } else {
     // Allow the form to submit

@@ -69,7 +69,7 @@ const loadOtherProjects = (section, otherProjects) => {
   });
 };
 
-/*      NO TEMPLATE METHOD FOR BOTH FUNCTIONS
+/*      NO TEMPLATE METHOD FOR BOTH FUNCTIONS: NO EFFICIENT, DISCARD
 // For every element in otherProjects, add in the proper section said project
   const loadOtherProjects = (section, otherProjects) => {
     otherProjects.forEach(project => {

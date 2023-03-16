@@ -46,6 +46,11 @@ textarea {
 .contact button {
   width: 100%;
 }
+#contact-us span {
+  font-size: 12px;
+  margin-left: 20px;
+  color: red;
+}
 
 /*************************************************/
 

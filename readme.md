@@ -14,11 +14,11 @@
 
 El proyecto cuenta con **tres páginas principales** diseñadas para brindar una experiencia de usuario agradable y fácil de navegar. Estas páginas son:
 
-    1. Página principal: cuenta con una barra de navegación clara y concisa para acceder a cada sección de la página de manera rápida. La sección de presentación presenta una breve descripción del proyecto y sus características principales, seguida de una sección de proyectos recientes y testimonios de clientes satisfechos. La sección de servicios ofrecidos y una sección de suscripción se encuentran al final de la página, con un pie de página que proporciona información adicional.
+1. Página principal: cuenta con una barra de navegación clara y concisa para acceder a cada sección de la página de manera rápida. La sección de presentación presenta una breve descripción del proyecto y sus características principales, seguida de una sección de proyectos recientes y testimonios de clientes satisfechos. La sección de servicios ofrecidos y una sección de suscripción se encuentran al final de la página, con un pie de página que proporciona información adicional.
 
-    2. Página de proyectos: esta página está diseñada para mostrar los proyectos actuales utilizando una API que nos proporciona los datos necesarios. En el apartado de funcionalidades con Javascript se detallará más esta página.
+2. Página de proyectos: esta página está diseñada para mostrar los proyectos actuales utilizando una API que nos proporciona los datos necesarios. En el apartado de funcionalidades con Javascript se detallará más esta página.
 
-    3. Página de contacto: cuenta con un formulario de contacto para que los usuarios puedan enviar sus consultas o comentarios directamente al equipo detrás del proyecto. El formulario cuenta con validación de campos y un mensaje de confirmación en un modal después de enviar el formulario.
+3. Página de contacto: cuenta con un formulario de contacto para que los usuarios puedan enviar sus consultas o comentarios directamente al equipo detrás del proyecto. El formulario cuenta con validación de campos y un mensaje de confirmación en un modal después de enviar el formulario.
 
 En resumen, cada página cuenta con una estructura bien definida y un diseño visual atractivo que proporciona una experiencia de usuario fácil de navegar.
 
@@ -40,9 +40,11 @@ Se han contemplado las siguientes resoluciones:
 - Width entre 760px y 1025px (tablets)
 - Mayores de 1025px (Desktop)
 
+Esto se ha realizado mediante la técnica **Mobile First Method**. Que ha demostrado ser una manera más eficiente en cuanto al tiempo y recursos.
+
 A parte, para la resolución de dispositivos móviles, se ha añadido una funcionalidad **extra**:
 
-    Se ha omitido la barra de navegación situado en la parte superior de todas las páginas y se ha adaptado a un menu desplegable lateral
+Se ha omitido la barra de navegación situado en la parte superior de todas las páginas y se ha adaptado a un menu desplegable lateral.
 
 
 ## Funcionalidades con Javascript
@@ -73,16 +75,16 @@ Actualmente este proyecto no está bajo ninguna licencia.
 
 ## Créditos
 
-Este proyecto ha sido realizado por Miguel Vergara como parte del programa de Ironhack en Barcelona. El diseño original fue proporcionado por Ironhack. Se han utilizado las siguientes herramientas y recursos:
+Este proyecto ha sido realizado por **Miguel Vergara**  como parte del programa de **Ironhack** en **Barcelona**. El diseño original fue proporcionado por Ironhack. Se han utilizado las siguientes herramientas y recursos:
 
-    FontAwesome para algunos iconos.
-    Google Fonts para la fuente utilizada.
-    Netlify para el despliegue de la página web.
+**FontAwesome** para algunos iconos.
+**Google Fonts** para la fuente utilizada.
+**Netlify** para el despliegue de la página web.
 
 
 
 ## Badges
 
-Netlify Status***
+Netlify Status*** LINK**
 
 Este badge muestra el estado actual del despliegue de la página web en Netlify. Haga clic en él para ver los detalles en la plataforma de Netlify.
