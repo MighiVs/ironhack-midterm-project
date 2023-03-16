@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/ce400484dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div id="scrollArrow">
+      <i class="fa-solid fa-arrow-up fa-beat"></i>
+    </div>
+    <nav class="nav-bar">
+      <div class="container">
+        <img
+          src="../images/logos/circle.svg"
+          alt="circle-logo"
+          id="circlelogo"
+        />
+        <ul class="nav-links">
+          <li id="empty"></li>
+          <li id="home"><a href="../index.html">Home</a></li>
+          <li id="projects"><a href="../project/project.html">Projects</a></li>
+          <li id="services">
+            <a href="../index.html#servicelink">Services</a>
+          </li>
+          <li class="btn">
+            <button
+              class="btn"
+              onclick="window.location.href='../contact/contact.html'"
+            >
+              Contact Us
+            </button>
+          </li>
+        </ul>
+        <div class="toggle">
+          <img src="../images/icons/togglelist.png" alt="menu" />
+        </div>
+      </div>
+    </nav>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <form action="" id="contact-us">
+        <div class="namediv field">
+          <label for="name">Full Name *</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="formrow">
+          <div class="emaildiv field">
+            <label for="email"><img src="" alt="" />Email <span id="error-email"></span></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="phonediv field">
+            <label for="phone">Phone <span id="error-phone"></span></label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="messagediv field">
+          <label for="message">Message <span id="error-message"></span></label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="left">
+          <img src="../images/logos/circle.svg" alt="circle-logo" />
+          <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+        </div>
+        <ul>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
